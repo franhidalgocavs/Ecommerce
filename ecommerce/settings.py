@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 # apps por defecto
 
 INSTALLED_APPS = [
+    "django.contrib.sites",
+    "registration", 
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # apps terceros
+    
     # mis apps
     "vistaprevia",
 ]
@@ -129,3 +132,8 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1

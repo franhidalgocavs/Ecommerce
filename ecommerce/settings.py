@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "django.contrib.sites",
     "registration", 
+    # apps por defecto
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -45,7 +46,9 @@ INSTALLED_APPS = [
     # apps terceros
     
     # mis apps
-    "vistaprevia",
+    'vistaprevia.apps.VistapreviaConfig',
+    'usuarios.apps.UsuariosConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -132,6 +135,9 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = '/vistaprevia'
+LOGIN_URL = 'django.contrib.auth.views.login'
 
 
 ACCOUNT_ACTIVATION_DAYS = 7
